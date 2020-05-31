@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/main"
+    android:layout_height="match_parent"
+    android:background="#0E0E0E"
+    android:paddingTop="32dp"
+    tools:context=".PostActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" android:orientation="vertical">
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Scream"
+            android:textAlignment="center"
+            android:paddingTop="16dp"
+            android:textSize="32sp"
+            android:textColor="@color/colorAccent"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:paddingTop="16dp"
+            android:elevation="25dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:orientation="horizontal" android:layout_marginTop="8dp">
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cancel"
+                android:layout_alignParentLeft="true"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                >
+
+
+            </com.google.android.material.button.MaterialButton>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/post"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="Post"
+
+                >
+
+
+            </com.google.android.material.button.MaterialButton>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/post"
+
+                android:layout_marginTop="16dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:hint="Title">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:id="@+id/title"
+                    android:inputType="text"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp">
+
+                </com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+        </RelativeLayout>
+
+
+        <ScrollView
+            android:id="@+id/scroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingConstraints"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+
+                >
+
+
+
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:padding="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="360dp"
+                    android:hint="Scream into the void"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/scream"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:minHeight="360dp"
+                        android:gravity="top|left"
+                        android:lines="6"
+
+                        android:inputType="textMultiLine"
+                        android:scrollHorizontally="false"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:paddingBottom="16dp"
+                        android:paddingTop="32dp"
+                        android:selectAllOnFocus="false"
+                        android:singleLine="false">
+
+                    </com.google.android.material.textfield.TextInputEditText>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

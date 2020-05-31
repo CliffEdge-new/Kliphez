@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "243809902158",
+    "firebase_url": "https://kliffedgestory.firebaseio.com",
+    "project_id": "kliffedgestory",
+    "storage_bucket": "kliffedgestory.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:243809902158:android:995fb72f0fd0babd28ad1f",
+        "android_client_info": {
+          "package_name": "com.aurovarat.avoid"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "243809902158-9s8soe0u5nf6ll1krlma5q33l273nieb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB84mTqycwUMtBf-q_2gCy-INIVm1YHtNQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "243809902158-9s8soe0u5nf6ll1krlma5q33l273nieb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:243809902158:android:928162f56075c7c428ad1f",
+        "android_client_info": {
+          "package_name": "com.aurovarat.kliphez"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "243809902158-9s8soe0u5nf6ll1krlma5q33l273nieb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB84mTqycwUMtBf-q_2gCy-INIVm1YHtNQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "243809902158-9s8soe0u5nf6ll1krlma5q33l273nieb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,13 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#565657</item>
+        <item name="colorPrimaryDark">#1E1E1E</item>
+        <item name="colorAccent">#F1F0F3</item>
+        <item name="android:fontFamily">serif-monospace</item>
+
+    </style>
+
+</resources>
