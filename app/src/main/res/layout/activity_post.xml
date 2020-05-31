@@ -14,7 +14,7 @@
         <com.google.android.material.textview.MaterialTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Scream"
+            android:text="Post"
             android:textAlignment="center"
             android:paddingTop="16dp"
             android:textSize="32sp"
@@ -54,7 +54,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/post"
-
+                android:id="@+id/title_wrap"
                 android:layout_marginTop="16dp"
                 android:paddingLeft="16dp"
                 android:paddingRight="16dp"
@@ -69,32 +69,29 @@
                 </com.google.android.material.textfield.TextInputEditText>
             </com.google.android.material.textfield.TextInputLayout>
             <com.google.android.material.textfield.TextInputLayout
-
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/title_wrap"
+                android:id="@+id/tag_wrap"
+                android:layout_marginTop="16dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
                 android:hint="Emotion TAg"
                 >
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/scream"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:minHeight="80dp"
-                    android:gravity="top|left"
-                    android:lines="6"
+            <com.google.android.material.textfield.TextInputEditText
 
-                    android:inputType="textMultiLine"
-                    android:scrollHorizontally="false"
-                    android:paddingLeft="8dp"
-                    android:paddingRight="8dp"
-                    android:paddingBottom="16dp"
-                    android:paddingTop="32dp"
-                    android:selectAllOnFocus="false"
-                    android:singleLine="false">
+                android:layout_width="match_parent"
+                android:id="@+id/scream"
+                android:inputType="text"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp">
 
-                </com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputEditText>
 
-            </com.google.android.material.textfield.TextInputLayout>
+        </com.google.android.material.textfield.TextInputLayout>
+
+
         </RelativeLayout>
 
 

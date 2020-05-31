@@ -32,7 +32,7 @@ import static java.sql.Types.TIMESTAMP;
 
 public class PostActivity extends AppCompatActivity {
     public static final String TITLE = "title";
-    public static final String SCREAM = "scream";
+    public static final String SCREAM = "tag";
     public static final String TIME = "time";
     public static final String LOCATION = "location";
 
