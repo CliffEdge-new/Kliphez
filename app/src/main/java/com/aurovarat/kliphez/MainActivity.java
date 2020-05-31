@@ -45,7 +45,7 @@ import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity {
     private FloatingActionButton fab;
-    private FirebaseAuth mAuth = FirebaseAuth.getInstance();
+    private FirebaseAuth mAuth;
     private RecyclerView recyclerView;
     private LinearLayoutManager linearLayoutManager;
     private FirestoreRecyclerAdapter adapter;
@@ -56,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        mAuth = FirebaseAuth.getInstance();
         setContentView(R.layout.activity_main);
         menu =findViewById(R.id.menu_button);
 // normal
@@ -71,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
         menu.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
-                Intent intent = new Intent(MainActivity.this, Search_Activity.class);
+                Intent intent = new Intent(MainActivity.this, SearchAct.class);
                 startActivity(intent);
             }
         });
