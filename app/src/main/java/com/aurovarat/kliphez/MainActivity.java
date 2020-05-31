@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
         menu.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
-                Intent intent = new Intent(MainActivity.this, MenuActivity.class);
+                Intent intent = new Intent(MainActivity.this, SearchAct.class);
                 startActivity(intent);
             }
         });
@@ -82,10 +82,10 @@ public class MainActivity extends AppCompatActivity {
 
 
         }
-//        recyclerView = findViewById(R.id.recycler_view);
+        recyclerView = findViewById(R.id.recycler_view);
 
         linearLayoutManager = new LinearLayoutManager(this);
-//        recyclerView.setLayoutManager(linearLayoutManager);
+        recyclerView.setLayoutManager(linearLayoutManager);
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         Query query = db.collection("posts").orderBy("key", Query.Direction.DESCENDING);
         FirestoreRecyclerOptions<Model> options = new FirestoreRecyclerOptions.Builder<Model>()

@@ -32,14 +32,15 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/creators"
-            android:layout_marginBottom="8dp"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
 
+            android:layout_marginBottom="8dp"
             android:text="Creators"
             android:textColor="@color/colorAccent"
-            style="@style/Widget.MaterialComponents.Button.TextButton"
             tools:ignore="MissingConstraints" />
+
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
@@ -54,4 +55,10 @@
             style="@style/Widget.MaterialComponents.Button.TextButton"
             tools:ignore="MissingConstraints" />
     </LinearLayout>
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="359dp"
+        android:layout_height="227dp"
+        app:srcCompat="@drawable/ic_launcher_foreground" />
 </RelativeLayout>
