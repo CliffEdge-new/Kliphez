@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
         menu.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
-                Intent intent = new Intent(MainActivity.this, Menu_activity.class);
+                Intent intent = new Intent(MainActivity.this, Search_Activity.class);
                 startActivity(intent);
             }
         });
@@ -101,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
             @NonNull
             @Override
             public mViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-                View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.scram, parent, false);
+                View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.cardview, parent, false);
                 return new mViewHolder(view);
             }
         };
