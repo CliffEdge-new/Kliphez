@@ -3,6 +3,33 @@ package com.aurovarat.kliphez;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.net.Uri;
+import android.os.Build;
+import android.os.Bundle;
+import android.text.Html;
+import android.text.SpannableString;
+import android.text.method.LinkMovementMethod;
+import android.text.util.Linkify;
+import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.Source;
+
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.ClipData;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -32,7 +59,7 @@ import com.google.firebase.firestore.Source;
 
 import java.lang.reflect.Array;
 
-class SearchAct extends AppCompatActivity {
+public class MenuActivity extends AppCompatActivity {
     private Button void_mark,creator,feedback;
     public String about;
     public MaterialAlertDialogBuilder materialAlertDialogBuilder,creatordialog;
@@ -41,7 +68,7 @@ class SearchAct extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_search);
+        setContentView(R.layout.activity_menu);
         dialogClickListener = new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
@@ -161,7 +188,7 @@ class SearchAct extends AppCompatActivity {
             finish();
             Log.i("Finished email", "");
         } catch (android.content.ActivityNotFoundException ex) {
-            Toast.makeText(SearchAct.this, "There is no email client installed.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(MenuActivity.this, "There is no email client installed.", Toast.LENGTH_SHORT).show();
         }
     }
 }

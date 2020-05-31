@@ -44,7 +44,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
-                android:text="Post"
+                android:text="Upload"
 
                 >
 
@@ -68,6 +68,33 @@
 
                 </com.google.android.material.textfield.TextInputEditText>
             </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:hint="Emotion TAg"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/scream"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:minHeight="80dp"
+                    android:gravity="top|left"
+                    android:lines="6"
+
+                    android:inputType="textMultiLine"
+                    android:scrollHorizontally="false"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:paddingBottom="16dp"
+                    android:paddingTop="32dp"
+                    android:selectAllOnFocus="false"
+                    android:singleLine="false">
+
+                </com.google.android.material.textfield.TextInputEditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
         </RelativeLayout>
 
 
@@ -88,34 +115,25 @@
 
 
 
-                <com.google.android.material.textfield.TextInputLayout
-                    android:padding="16dp"
+
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="360dp"
-                    android:hint="Scream into the void"
-                    >
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/scream"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <com.google.android.material.button.MaterialButton
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:minHeight="360dp"
-                        android:gravity="top|left"
-                        android:lines="6"
+                        android:layout_height="40dp"
+                        android:text="Record"
+                        >
 
-                        android:inputType="textMultiLine"
-                        android:scrollHorizontally="false"
-                        android:paddingLeft="8dp"
-                        android:paddingRight="8dp"
-                        android:paddingBottom="16dp"
-                        android:paddingTop="32dp"
-                        android:selectAllOnFocus="false"
-                        android:singleLine="false">
+                    </com.google.android.material.button.MaterialButton>
+                    <com.google.android.material.button.MaterialButton
+                        android:layout_width="match_parent"
+                        android:text="Browse Audio"
+                        android:layout_height="40dp">
 
-                    </com.google.android.material.textfield.TextInputEditText>
-
-                </com.google.android.material.textfield.TextInputLayout>
-
+                    </com.google.android.material.button.MaterialButton>
+                </LinearLayout>
             </LinearLayout>
         </ScrollView>
 
