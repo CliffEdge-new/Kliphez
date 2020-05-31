@@ -32,7 +32,7 @@ import com.google.firebase.firestore.Source;
 
 import java.lang.reflect.Array;
 
-public class Search_Activity extends AppCompatActivity {
+class SearchAct extends AppCompatActivity {
     private Button void_mark,creator,feedback;
     public String about;
     public MaterialAlertDialogBuilder materialAlertDialogBuilder,creatordialog;
@@ -161,9 +161,7 @@ public class Search_Activity extends AppCompatActivity {
             finish();
             Log.i("Finished email", "");
         } catch (android.content.ActivityNotFoundException ex) {
-            Toast.makeText(Search_Activity.this, "There is no email client installed.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(SearchAct.this, "There is no email client installed.", Toast.LENGTH_SHORT).show();
         }
     }
 }
-
-
