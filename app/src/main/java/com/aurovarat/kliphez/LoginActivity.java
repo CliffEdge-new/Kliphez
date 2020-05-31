@@ -27,8 +27,13 @@ public class LoginActivity extends AppCompatActivity {
         final TextView inputPassword = findViewById(R.id.password);
         Button btnLogin = findViewById(R.id.Login);
         btnLogin.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
+                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                startActivity(intent);
+                finish();
+
                 String email = inputEmail.getText().toString().trim();
                 String password = inputPassword.getText().toString();
 
@@ -43,15 +48,15 @@ public class LoginActivity extends AppCompatActivity {
                 auth.signInWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
-                    if(!task.isSuccessful()){
-                        Toast.makeText(LoginActivity.this, "failed", Toast.LENGTH_LONG).show();
+                        if (!task.isSuccessful()) {
+                            Toast.makeText(LoginActivity.this, "failed", Toast.LENGTH_LONG).show();
+                        } else {
+                            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                            startActivity(intent);
+                            finish();
+                        }
                     }
-                    else {
-                        Intent intent = new Intent(LoginActivity.this,MainActivity.class);
-                        startActivity(intent);
-                        finish();
-                    }
-                    }
+
                 });
             }
         });

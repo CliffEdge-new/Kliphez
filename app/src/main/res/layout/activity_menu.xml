@@ -21,7 +21,7 @@
             android:layout_height="wrap_content"
             android:textStyle="bold"
             android:textFontWeight="1000"
-            android:text="Void ?"
+            android:text="upload"
 
 
             android:backgroundTint="@color/colorAccent"
@@ -37,7 +37,7 @@
             android:layout_height="wrap_content"
 
             android:layout_marginBottom="8dp"
-            android:text="Creators"
+            android:text="Search"
             android:textColor="@color/colorAccent"
             tools:ignore="MissingConstraints" />
 
@@ -45,20 +45,96 @@
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:background="@color/colorAccent"/>
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/feedback"
-            android:layout_marginBottom="8dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Feedback"
-            android:textColor="@color/colorAccent"
-            style="@style/Widget.MaterialComponents.Button.TextButton"
-            tools:ignore="MissingConstraints" />
+<!--        <com.google.android.material.button.MaterialButton-->
+<!--            android:id="@+id/feedback"-->
+<!--            android:layout_marginBottom="8dp"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Feedback"-->
+<!--            android:textColor="@color/colorAccent"-->
+<!--            style="@style/Widget.MaterialComponents.Button.TextButton"-->
+<!--            tools:ignore="MissingConstraints" />-->
     </LinearLayout>
 
     <ImageView
-        android:id="@+id/image"
+        android:id="@+id/image_viewer"
         android:layout_width="359dp"
         android:layout_height="227dp"
         app:srcCompat="@drawable/ic_launcher_foreground" />
+    <?xml version="1.0" encoding="utf-8"?>
+    <androidx.cardview.widget.CardView android:layout_width="match_parent"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:minHeight="150dp"
+        android:layout_marginBottom="16dp"
+        android:id="@+id/card"
+        app:cardCornerRadius="5dp"
+        app:cardBackgroundColor="#404040"
+        tools:ignore="MissingConstraints"
+        android:padding="16dp"
+        android:layout_height="wrap_content"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical">
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/card_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorAccent"
+                android:text="Alice in Wonderland">
+            </com.google.android.material.textview.MaterialTextView>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/card_scream"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="32dp"
+                android:textSize="16sp"
+
+                android:textFontWeight="700"
+                android:textColor="@color/colorAccent"
+                >
+            </com.google.android.material.textview.MaterialTextView>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" android:padding="16dp">
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/datetime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_alignParentLeft="true"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:text="00 September 2019">
+
+                </com.google.android.material.textview.MaterialTextView>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="32dp"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:layout_alignParentRight="true"
+
+                    android:text="India">
+
+                </com.google.android.material.textview.MaterialTextView>
+            </RelativeLayout>
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
 </RelativeLayout>

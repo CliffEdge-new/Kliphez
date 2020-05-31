@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
         menu =findViewById(R.id.menu_button);
 // normal
         fab = findViewById(R.id.fab);
-        fab.setEnabled(false);
+
         fab.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
@@ -72,75 +72,75 @@ public class MainActivity extends AppCompatActivity {
         menu.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
-                Intent intent = new Intent(MainActivity.this, SearchAct.class);
+                Intent intent = new Intent(MainActivity.this, MenuActivity.class);
                 startActivity(intent);
             }
         });
-        FirebaseUser currentUser = mAuth.getCurrentUser();
-        if (currentUser != null) {
-            fab.setEnabled(true);
+//        FirebaseUser currentUser = mAuth.getCurrentUser();
+//        if (currentUser != null) {
+//            fab.setEnabled(true);
+//
+//
+//        }
+//        recyclerView = findViewById(R.id.recycler_view);
 
-
-        }
-        recyclerView = findViewById(R.id.recycler_view);
-
-        linearLayoutManager = new LinearLayoutManager(this);
-        recyclerView.setLayoutManager(linearLayoutManager);
-        FirebaseFirestore db = FirebaseFirestore.getInstance();
-        Query query = db.collection("posts").orderBy("key", Query.Direction.DESCENDING);
-        FirestoreRecyclerOptions<Model> options = new FirestoreRecyclerOptions.Builder<Model>()
-                .setQuery(query, Model.class)
-                .build();
-        adapter = new FirestoreRecyclerAdapter<Model,mViewHolder>(options) {
-            @Override
-            protected void onBindViewHolder(@NonNull mViewHolder mViewHolder, int i, @NonNull Model model) {
-
-                mViewHolder.setScream(getApplicationContext(),model.getTitle(),model.getScream(),model.getLocation(),model.getTime());
-            }
-
-
-            @NonNull
-            @Override
-            public mViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-                View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.cardview, parent, false);
-                return new mViewHolder(view);
-            }
-        };
-        recyclerView.setAdapter(adapter);
-
-    }
-    private class mViewHolder extends RecyclerView.ViewHolder {
-        private TextView title_text,scream_text,location_text,time_text;
-
-        public mViewHolder(@NonNull View view) {
-            super(view);
-            title_text = view.findViewById(R.id.card_title);
-            scream_text = view.findViewById(R.id.card_scream);
-            location_text = view.findViewById(R.id.location);
-            time_text = view.findViewById(R.id.datetime);
-        }
-
-        void setScream(Context context,String title,String scream,String location,String time) {
-            this.title_text.setText(title);
-            this.scream_text.setText(scream);
-            this.location_text.setText(location);
-            this.time_text.setText(time);
-        }
-        private FirestoreRecyclerAdapter<Model,mViewHolder> adapter;
-
-    }
-    @Override
-    protected void onStart() {
-        super.onStart();
-        adapter.startListening();
-    }
-
-    @Override
-    protected void onStop() {
-        super.onStop();
-
-        if (adapter != null) {
-            adapter.stopListening();
-        }
+//        linearLayoutManager = new LinearLayoutManager(this);
+//        recyclerView.setLayoutManager(linearLayoutManager);
+//        FirebaseFirestore db = FirebaseFirestore.getInstance();
+//        Query query = db.collection("posts").orderBy("key", Query.Direction.DESCENDING);
+//        FirestoreRecyclerOptions<Model> options = new FirestoreRecyclerOptions.Builder<Model>()
+//                .setQuery(query, Model.class)
+//                .build();
+//        adapter = new FirestoreRecyclerAdapter<Model,mViewHolder>(options) {
+//            @Override
+//            protected void onBindViewHolder(@NonNull mViewHolder mViewHolder, int i, @NonNull Model model) {
+//
+//                mViewHolder.setScream(getApplicationContext(),model.getTitle(),model.getScream(),model.getLocation(),model.getTime());
+//            }
+//
+//
+//            @NonNull
+//            @Override
+//            public mViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+//                View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.cardview, parent, false);
+//                return new mViewHolder(view);
+//            }
+//        };
+//        recyclerView.setAdapter(adapter);
+//
+//    }
+//    private class mViewHolder extends RecyclerView.ViewHolder {
+//        private TextView title_text,scream_text,location_text,time_text;
+//
+//        public mViewHolder(@NonNull View view) {
+//            super(view);
+//            title_text = view.findViewById(R.id.card_title);
+//            scream_text = view.findViewById(R.id.card_scream);
+//            location_text = view.findViewById(R.id.location);
+//            time_text = view.findViewById(R.id.datetime);
+//        }
+//
+//        void setScream(Context context,String title,String scream,String location,String time) {
+//            this.title_text.setText(title);
+//            this.scream_text.setText(scream);
+//            this.location_text.setText(location);
+//            this.time_text.setText(time);
+//        }
+//        private FirestoreRecyclerAdapter<Model,mViewHolder> adapter;
+//
+//    }
+//    @Override
+//    protected void onStart() {
+//        super.onStart();
+////        adapter.startListening();
+////    }
+//
+//    @Override
+//    protected void onStop() {
+//        super.onStop();
+//
+//        if (adapter != null) {
+//            adapter.stopListening();
+//        }
     }
 }
